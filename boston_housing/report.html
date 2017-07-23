@@ -11844,6 +11844,8 @@ div#notebook {
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/Users/Robin/anaconda/lib/python3.6/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
   &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
+/Users/Robin/anaconda/lib/python3.6/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
+  DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -11855,18 +11857,6 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Boston housing dataset has 489 data points with 4 variables each.
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/Robin/anaconda/lib/python3.6/site-packages/sklearn/learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
-  DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -11903,23 +11893,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -11950,7 +11940,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -12021,7 +12011,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -12084,7 +12074,7 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -12163,13 +12153,13 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="c1"># TODO: Shuffle and split the data into training and testing subsets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># Success</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training and testing split was successful.&quot;</span><span class="p">)</span>
@@ -13295,8 +13285,8 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-Let's look at the figure with <code>'max_depth'=10</code>. The score of test set has gone up rapidly when number of training points increases from 0 to 50, however, the increase of the score stagnated and started to decrease when the number of training points exceeded 200. On the other hand, the score of test set slightly decreased when more training points are added. We can also notice that the score of training set and test set converged with larger threshold than the models using smaller <code>'max_depth'</code>. We can also find that the model with <code>'max_depth'=3</code> has best performance among all the models since not only that the test set has higher R2 score but also that the test set and training set have converged to the smallest threshold.</p>
-<p>To summarize, having more training points generally do benefit the model, however when <code>'max_depth'&gt;6</code> and number of training points is over 200, the score may decrease if adding more training points. Secondly, the score of training set tends to decrease when more training points are added. Finally, when the model with <code>'max_depth'=3</code> gives the best result.</p>
+Let's look at the figure with <code>'max_depth'=10</code>. The score of test set has gone up rapidly when number of training points increases from 0 to 50, however, the increase of the score stagnated and started to decrease when the number of training points exceeded 200. On the other hand, the score of training set slightly decreased when more training points are added. We can also notice that the score of training set and test set converged with larger threshold than the models using smaller <code>'max_depth'</code>. We can also find that the model with <code>'max_depth'=3</code> has best performance among all the models since not only that the test set has higher R2 score but also that the test set and training set have converged to the smallest threshold.</p>
+<p>To summarize, having more training points generally do benefit the model, however when <code>'max_depth'&gt;6</code> and number of training data is over 200, the score may decrease if adding more training points. Secondly, the score of training set tends to decrease when more training points are added. Finally, when the model with <code>'max_depth'=3</code> gives the best result. Therefore, more data does not necessary benefit the model as much as it does when data is sparse. As collecting data can somehow be time consuming and costly, the learning curve actually gave a guidance how much data is enough and how more data in different stage would be efficiently beneficial to accuracy of the model.</p>
 
 </div>
 </div>
@@ -13838,8 +13828,8 @@ It seems that maximum depth set to 4 will give us the best prediction since it g
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-Grid search is a technique to search the best classification model, hyperparameters and kernel to be used to fit the data.
-It will calculate the score of each combination of models, hyperparameters and kernel giving to the function. We can then choose the one combination that returns the best score to optimize our learning  algorithm.</p>
+Grid search is a technique to search the best classification model, hyperparameters and kernel to be used to fit the data. The name grid stands for the combination of each model, hyperparameters and kernel. It will then calculate the score of each grid and return the best grid/combination. We can then choose the one combination that returns the best score to optimize our learning algorithm. 
+In this particular case, we are using grid search to find out the best <code>max_depth</code> of decision tree regressor. We simply set up a set of parameter with different <code>max_depth</code> for the grid search to find out what would be the best <code>max_depth</code> for decision tree regressor to fit our data set.</p>
 
 </div>
 </div>
@@ -13865,8 +13855,8 @@ It will calculate the score of each combination of models, hyperparameters and k
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-K-fold cross-validation is to seperate the giving data sets into k sets/folds. We can use each of the k folds as validation data set, and the rest k-1 folds as training sets. 
-When we are using grid search technique, we will apply k-fold method to each combination of parameters, retrieving k different scores for each combination of parameters. This will give us relatively non-biased score for each combination of parameters after we calculate the average of the k different scores.</p>
+K-fold cross-validation is to randomly seperate the giving training set into k sets/folds. We can use each of the k folds as validation data set, and the rest k-1 folds as training sets. Such process will be repeat k-times by selecting each fold as test set and others as training set, so that we will have k different scores with one particular combination of hyperparameter and model. We then use the average of the score to represent how well such combination of hyperparameter and model performs. In grid search, we'll use those score to select the best combination of hyperparameters to fit all the training data, and make prediction on test data.</p>
+<p>The main objective of K-fold corss-vlaidation method is to minimize risk of getting biased score from the training set and not containminate the test set. Since different combination of training set tend to have different outcome or level of bias to the model, use the whole training set alone to evaluate a model will likely produce biased score. The advantage of K-fold cross-validation, is that we randomly shuffle and split the training data and get K different evaluation to one combination of model and hyperparameters. With K different score, we can be more confident that the bias caused by combination of training set has been minimized.</p>
 
 </div>
 </div>
@@ -14100,8 +14090,9 @@ Predicted selling price for Client 3&#39;s home: $889,700.00
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-According to the model we predicted that the prices are $410,822.22 for Client 1, $238,188.46 for Client 2, and $950512.50 for Client 3.
-This result is coherent to our reasoning in 'Q1 feature observation'. The Client 3's home has the most rooms and the least neighborhood poverty level and Student-teacher ratio of nearby schools among all three clients, therefore, he gets the highest price prediction for his property. The same logic also applies to the price prediction for both Client 2 and Client 3.</p>
+According to the model, we predicted that the prices are $410,822.22 for Client 1, $238,188.46 for Client 2, and $950512.50 for Client 3.
+This result is coherent to our reasoning in 'Q1 feature observation'. The Client 3's home has the most rooms and the least neighborhood poverty level and Student-teacher ratio of nearby schools among all three clients, therefore, he gets the highest price prediction for his property.
+As we've identified the the linear relationship between features and prices, the same logic also applies to the price prediction for both Client 1 and Client 2. Client 2 has least rooms, but most neighborhood poverty level and student-teacher ratio, it's not surprising that his/her property has the least price. For client 1, he/she has the property with all features in between Client2 and Client3, and therefore, his/her property is predicted the price in between the other two clients.</p>
 
 </div>
 </div>
@@ -14202,19 +14193,6 @@ It seems that the model has done a good job for predicting major price trend giv
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
