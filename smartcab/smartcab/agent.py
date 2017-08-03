@@ -49,7 +49,7 @@ class LearningAgent(Agent):
         else:
             
             #self.epsilon = 1 - 0.05*(self.trail_number-1)
-            self.epsilon = math.exp(-(self.trail_number-1)*0.09)
+            self.epsilon = math.exp(-(self.trail_number-1)*0.03)
         return None
 
     def build_state(self):
@@ -100,10 +100,7 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        
-        if state in self.Q:
-            pass
-        else:
+        if self.learning and (state not in self.Q):
             self.Q[state] = {}
             for a in self.actions:
                 self.Q[state][a] = 0.0
@@ -127,11 +124,11 @@ class LearningAgent(Agent):
         # Otherwise, choose an action with the highest Q-value for the current state
         # Be sure that when choosing an action with highest Q-value that you randomly select between actions that "tie".
         rnd = random.random()
-        if self.learning and (rnd <= self.epsilon):
+        if (not self.learning) or (rnd <= self.epsilon): 
             
             action = random.choice(self.actions)
             
-        else:
+        else: 
             action = random.choice(self.get_maxQ(state))
         
         return action
