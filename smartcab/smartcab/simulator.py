@@ -10,6 +10,7 @@ import time
 import random
 import importlib
 import csv
+import pickle
 
 class Simulator(object):
     """Simulates agents in a dynamic smartcab environment.
@@ -228,6 +229,9 @@ class Simulator(object):
         if self.log_metrics:
 
             if a.learning:
+                
+                # Save Q-table into picle file
+                pickle.dump( a.Q, open( "logs/Q.p", "wb" ) )
                 f = self.table_file
                 
                 f.write("/-----------------------------------------\n")

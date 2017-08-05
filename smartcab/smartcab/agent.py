@@ -47,9 +47,8 @@ class LearningAgent(Agent):
             self.epsilon = 0
             self.alpha = 0
         else:
-            
-            #self.epsilon = 1 - 0.05*(self.trail_number-1)
-            self.epsilon = math.exp(-(self.trail_number-1)*0.03)
+            #self.epsilon = 1 - 0.05*(self.trail_number-1) # Default learning rate
+            self.epsilon = math.exp(-(self.trail_number-1)*0.03) # Optimized learning rate
         return None
 
     def build_state(self):
@@ -72,7 +71,7 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
         
         # Set 'state' as a tuple of relevant data for the agent        
-        state = (waypoint, inputs['light'])
+        state = (waypoint, inputs['light'], inputs['oncoming'])
 
         return state
 
@@ -199,7 +198,7 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, display = False, update_delay=0.0, log_metrics=True, optimized=True)
+    sim = Simulator(env, display = False, update_delay=0.0, log_metrics=True, optimized=False)
     
     ##############
     # Run the simulator
